@@ -100,19 +100,6 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
-                document.querySelector("#unity-canvas"), {
-                arguments: [],
-                dataUrl: "Build/myGame.data.unityweb",
-                workerUrl: "Build/myGame.data.unityweb",
-                frameworkUrl: "Build/myGame.framework.js.unityweb",
-                codeUrl: "Build/myGame.wasm.unityweb",
-                streamingAssetsUrl: "StreamingAssets",
-                companyName: "Company",
-                productName: "Product",
-                productVersion: "1.0.0",
-                // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-                // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-                };
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
